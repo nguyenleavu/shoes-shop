@@ -7,7 +7,11 @@ module.exports = {
     theme: {
         typography: (theme) => ({}),
         extend: {},
-      },
+    },
     darkMode: 'class',
     plugins: [],
+    purge: [
+        './src/pages/**/*.{js,ts,jsx,tsx}',
+        './src/components/**/*.{js,ts,jsx,tsx}',
+    ],
 };
