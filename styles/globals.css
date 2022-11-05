@@ -1,26 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+    color: #252525;
+}
+
+body:has(input[name='theme']:checked) {
+    background-color: #151515;
+}
+body:has(input[name='themeMobile']:checked) {
+    background-color: #151515;
+}
+
+.bebas {
+    font-family: 'Bebas Neue';
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.radial {
+    background: radial-gradient(#454545, #000000);
+    background-repeat: no-repeat;
+    position: absolute;
+    inset: 0;
+    z-index: -20;
+}
+
+.container {
+    display: flex;
+    min-height: 550px;
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.216);
+    border-right: 0.5px solid rgba(255, 255, 255, 0.105);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.102);
+}
+
+.input {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.invalid:invalid {
+    border: 1px solid red;
+}
+
+.bg-home {
+    background-image: url(../assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -10;
+    height: 100vh;
+    object-fit: contain;
+    position: absolute;
+    filter: blur(5px);
+    inset: 0;
+}
+
+/* color input */
+.colorInput {
+    opacity: 0;
+    position: absolute;
+}
+
+.colorInput:checked ~ label {
+    display: block;
+    height: 72px;
+    width: 72px;
+    border: 1px solid #151515;
+    border-radius: 8px;
+}
+
+.colorInputMobile {
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.colorInputMobile:checked ~ label {
+    display: block;
+    height: 82px;
+    width: 82px;
+    border: 1px solid #151515;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* theme */
+.theme {
+    width: 50px;
+    height: 24px;
+    display: block;
+    background-color: #dddddd;
+    border-radius: 999px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.theme::before {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    content: '';
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: 0 5px 10px #b5b4b4;
+}
+
+.theme:has(input:checked) {
+    background-color: #fe89c6;
+}
+.theme:has(input:checked)::before {
+    left: calc(100% - 20px);
+}
+
+/* product  */
+.product {
+    border-radius: 50%;
+}
+
+.product:hover {
+    transform: rotate(-20deg) scale(1.1);
+    transition: transform 1s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.product-translate {
+    animation: productTranslate 1.5s ease forwards;
+}
+
+@keyframes productTranslate {
+    from {
+        opacity: 0;
+        transform: translateY(1000px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* size */
+
+.size input:checked ~ label {
+    border: 1px solid #151515;
+}
+
+/* orders */
+
+
+
+/* all product */
+
+.all-product .bg-even:nth-child(even) {
+    background-color: #0000001A;
+}
+
+/* active nav */
+.active {
+    display: block;
+    color: #f472b6;
+    border-bottom: 2px solid #f472b6;
+    transition: all 1s ease-in;
+    box-sizing: border-box;
+}
+
+/* animation mobile sidebar */
+.m-sidebar {
+    animation: toLeft 0.7s ease-in-out forwards;
+}
+
+/* animation boost */
+.scale {
+    opacity: 0;
+    animation: scale 4s ease forwards;
+}
+
+/* animation text */
+.character {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #2aebf5 0%,
+        #27e53a 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textClip 4s linear infinite;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 20px 80px;
+}
+
+@keyframes textClip {
+    100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes toLeft {
+    from {
+        opacity: 0;
+        transform: translate(200px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scale {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    .radial {
+        background: #b6b4b4;
+    }
 }
