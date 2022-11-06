@@ -1,10 +1,10 @@
 import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
+import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/globals.css';
-import { Provider } from 'react-redux';
+import Layout from '../components/Layout';
 import { store } from '../redux/store';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, ...appProps }: AppProps) {
     const route = ['/register', '/login', '/reset-password', '/'];
