@@ -24,11 +24,13 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     const themeRef = useRef<any>(null);
     const themeMobileRef = useRef<any>(null);
+    const [admin,setAdmin]=useState<string | null>('');
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.displayName);
+                setAdmin(user.email)
                 if (!user.displayName) {
                     setUsername(user.email);
                 }
@@ -89,7 +91,7 @@ const Header = () => {
                     </a>
                 </Link>
                 <ul className='flex items-center  tracking-widest justify-between font-medium text-xl cursor-pointer text-[#252525] dark:text-[#ddd]'>
-                    {username === 'admin' && (
+                    {admin === 'admin@gmail.com' && (
                         <Link href='/admin'>
                             <a className='h-10 w-24 flex justify-center items-center bg-blue-400 rounded text-white hover:bg-blue-500 transition-colors'>
                                 ADMIN
