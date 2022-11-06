@@ -1,6 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 import Script from 'next/script';
-import FaceBook from '../components/FaceBook';
 
 const Document = () => {
     return (
@@ -22,12 +21,10 @@ const Document = () => {
                     rel='stylesheet'
                 ></link>
             </Head>
-
             <body className='dark:bg-[#151515] dark:text-[#ddd]'>
                 <Main />
                 <NextScript />
             </body>
-            <FaceBook />
         </Html>
     );
 };
