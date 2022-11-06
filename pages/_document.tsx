@@ -1,6 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
-import { MessengerChat } from 'react-messenger-chat-plugin';
 
 const Document = () => {
     return (
@@ -26,35 +24,7 @@ const Document = () => {
                 <Main />
                 <NextScript />
             </body>
-            <MessengerChat
-                pageId='102521359343536'
-                language='vi_VN'
-                themeColor={'#000000'}
-                bottomSpacing={300}
-                loggedInGreeting='loggedInGreeting'
-                loggedOutGreeting='loggedOutGreeting'
-                greetingDialogDisplay={'show'}
-                debugMode={true}
-                onMessengerShow={() => {
-                    console.log('onMessengerShow');
-                }}
-                onMessengerHide={() => {
-                    console.log('onMessengerHide');
-                }}
-                onMessengerDialogShow={() => {
-                    console.log('onMessengerDialogShow');
-                }}
-                onMessengerDialogHide={() => {
-                    console.log('onMessengerDialogHide');
-                }}
-                onMessengerMounted={() => {
-                    console.log('onMessengerMounted');
-                }}
-                onMessengerLoad={() => {
-                    console.log('onMessengerLoad');
-                }}
-            />
-            ,
+            
         </Html>
     );
 };

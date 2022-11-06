@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import { store } from '../redux/store';
 import '../styles/globals.css';
 
+
 function MyApp({ Component, pageProps, ...appProps }: AppProps) {
     const route = ['/register', '/login', '/reset-password', '/'];
     const adminRoute = [
