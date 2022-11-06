@@ -18,6 +18,7 @@ const OrderDetails = (props: Props) => {
 
     const handleUpdate = () => {
         updateStatus(id, status);
+        router.back();
     };
 
     useEffect(() => {
@@ -36,6 +37,7 @@ const OrderDetails = (props: Props) => {
         };
         fetchAPI();
     }, [router.query.id]);
+
     return order ? (
         <div className='flex flex-col items-center min-h-[60.5vh] p-2 lg:p-10'>
             <h2 className='text-3xl font-semibold tracking-wide'>
