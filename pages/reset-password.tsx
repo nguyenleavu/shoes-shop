@@ -35,7 +35,7 @@ const Reset = (props: Props) => {
             <div className='flex items-center justify-center h-[100vh] relative dark:bg-[#151515]'>
                 <Canvas />
                 <section className='container md:w-[400px]'>
-                    <div className='w-full h-[100vh] md:h-[550px] p-10 relative bg-[#00000080] rounded-3xl dark:rounded-none dark:bg-transparent'>
+                    <div className='w-full h-[100vh] md:h-[550px] p-10 relative bg-[#00000080] lg:rounded-3xl dark:rounded-none dark:bg-transparent'>
                         <h2 className='text-4xl font-semibold relative tracking-[1px] mb-10 text-white'>
                             Reset Password
                         </h2>
