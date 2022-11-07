@@ -58,7 +58,6 @@ function MyApp({ Component, pageProps, ...appProps }: AppProps) {
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
-                <ChatBox/>
             </Provider>
         </>
     );

@@ -9,6 +9,7 @@ function ChatBox() {
             <div id='fb-root'></div>
 
             <div id='fb-customer-chat' className='fb-customerchat'></div>
+            
             <Script strategy='lazyOnload' id='fb-customer-chat'>
                 {`
             var chatbox = document.getElementById('fb-customer-chat');

@@ -1,8 +1,10 @@
 import { Head, Html, Main, NextScript } from 'next/document';
+import ChatBox from '../components/ChatBox';
 
 const Document = () => {
     return (
         <Html>
+            <ChatBox />
             <Head>
                 <link
                     rel='stylesheet'
@@ -24,7 +26,6 @@ const Document = () => {
                 <Main />
                 <NextScript />
             </body>
-            
         </Html>
     );
 };
