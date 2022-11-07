@@ -4,7 +4,6 @@ import ChatBox from '../components/ChatBox';
 const Document = () => {
     return (
         <Html>
-            <ChatBox />
             <Head>
                 <link
                     rel='stylesheet'
@@ -23,6 +22,7 @@ const Document = () => {
                 ></link>
             </Head>
             <body className='dark:bg-[#151515] dark:text-[#ddd]'>
+                <ChatBox />
                 <Main />
                 <NextScript />
             </body>
