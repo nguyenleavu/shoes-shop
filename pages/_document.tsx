@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import ChatBox from '../components/ChatBox';
 
 const Document = () => {
     return (
@@ -22,7 +21,6 @@ const Document = () => {
                 ></link>
             </Head>
             <body className='dark:bg-[#151515] dark:text-[#ddd]'>
-                <ChatBox />
                 <Main />
                 <NextScript />
             </body>

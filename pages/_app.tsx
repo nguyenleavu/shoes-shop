@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ChatBox from '../components/ChatBox';
 import Layout from '../components/Layout';
 import { store } from '../redux/store';
 import '../styles/globals.css';

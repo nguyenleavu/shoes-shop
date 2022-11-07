@@ -1,0 +1,199 @@
+[debug] [2022-11-07T06:44:31.571Z] ----------------------------------------------------------------------
+[debug] [2022-11-07T06:44:31.574Z] Command:       D:\SettingsCode\NodeJs\node.exe C:\Users\vu120\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-07T06:44:31.575Z] CLI Version:   11.16.0
+[debug] [2022-11-07T06:44:31.575Z] Platform:      win32
+[debug] [2022-11-07T06:44:31.575Z] Node Version:  v16.15.1
+[debug] [2022-11-07T06:44:31.576Z] Time:          Mon Nov 07 2022 13:44:31 GMT+0700 (Indochina Time)
+[debug] [2022-11-07T06:44:31.576Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-07T06:44:31.674Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-07T06:44:31.675Z] > authorizing via signed-in user (nguyenleavu@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\NextJS\shoes-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-07T06:44:45.971Z] Using project from CLI flag: shoes-shop-b8ebd
+[debug] [2022-11-07T06:44:45.974Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoes-shop-b8ebd [none]
+[debug] [2022-11-07T06:44:46.791Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoes-shop-b8ebd 200
+[debug] [2022-11-07T06:44:46.791Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoes-shop-b8ebd {"projectId":"shoes-shop-b8ebd","projectNumber":"85290001433","displayName":"shoes-shop","name":"projects/shoes-shop-b8ebd","resources":{"hostingSite":"shoes-shop-b8ebd","storageBucket":"shoes-shop-b8ebd.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_f991b196-4fbd-40ff-9577-5ced1e122661"}
+[info] i  Using project shoes-shop-b8ebd (shoes-shop) 
+[info] 
+=== Firestore Setup
+[debug] [2022-11-07T06:44:46.803Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/shoes-shop-b8ebd/services/firestore.googleapis.com [none]
+[debug] [2022-11-07T06:44:46.803Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/shoes-shop-b8ebd/services/firestore.googleapis.com x-goog-quota-user=projects/shoes-shop-b8ebd
+[debug] [2022-11-07T06:44:48.053Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/shoes-shop-b8ebd/services/firestore.googleapis.com 200
+[debug] [2022-11-07T06:44:48.053Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/shoes-shop-b8ebd/services/firestore.googleapis.com [omitted]
+[debug] [2022-11-07T06:44:48.054Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/shoes-shop-b8ebd [none]
+[debug] [2022-11-07T06:44:48.484Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/shoes-shop-b8ebd 200
+[debug] [2022-11-07T06:44:48.484Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/shoes-shop-b8ebd {"name":"apps/shoes-shop-b8ebd","id":"shoes-shop-b8ebd","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.shoes-shop-b8ebd.appspot.com","servingStatus":"SERVING","defaultHostname":"shoes-shop-b8ebd.uc.r.appspot.com","defaultBucket":"shoes-shop-b8ebd.appspot.com","serviceAccount":"shoes-shop-b8ebd@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-11-07T06:44:48.484Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-11-07T06:44:48.484Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-07T06:44:48.485Z] > authorizing via signed-in user (nguyenleavu@gmail.com)
+[debug] [2022-11-07T06:44:48.485Z] [iam] checking project shoes-shop-b8ebd for permissions ["firebase.projects.get"]
+[debug] [2022-11-07T06:44:48.485Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoes-shop-b8ebd:testIamPermissions [none]
+[debug] [2022-11-07T06:44:48.486Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoes-shop-b8ebd:testIamPermissions x-goog-quota-user=projects/shoes-shop-b8ebd
+[debug] [2022-11-07T06:44:48.486Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoes-shop-b8ebd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-07T06:44:49.429Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoes-shop-b8ebd:testIamPermissions 200
+[debug] [2022-11-07T06:44:49.429Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoes-shop-b8ebd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-11-07T06:45:00.374Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/releases pageSize=10&pageToken=
+[debug] [2022-11-07T06:45:01.498Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/releases 200
+[debug] [2022-11-07T06:45:01.498Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/releases {"releases":[{"name":"projects/shoes-shop-b8ebd/releases/cloud.firestore","rulesetName":"projects/shoes-shop-b8ebd/rulesets/bacca84c-5b3f-4d10-ac20-e5f361a7e31a","createTime":"2022-10-25T16:14:30.536469Z","updateTime":"2022-11-06T15:12:05.507383Z"},{"name":"projects/shoes-shop-b8ebd/releases/firebase.storage/shoes-shop-b8ebd.appspot.com","rulesetName":"projects/shoes-shop-b8ebd/rulesets/64cd8591-9d2d-4eb3-b0d9-795788a80633","createTime":"2022-10-26T05:58:08.733184Z","updateTime":"2022-11-06T15:10:01.991249Z"}]}
+[debug] [2022-11-07T06:45:01.512Z] Found ruleset: projects/shoes-shop-b8ebd/rulesets/bacca84c-5b3f-4d10-ac20-e5f361a7e31a
+[debug] [2022-11-07T06:45:01.513Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/rulesets/bacca84c-5b3f-4d10-ac20-e5f361a7e31a [none]
+[debug] [2022-11-07T06:45:02.622Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/rulesets/bacca84c-5b3f-4d10-ac20-e5f361a7e31a 200
+[debug] [2022-11-07T06:45:02.622Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/shoes-shop-b8ebd/rulesets/bacca84c-5b3f-4d10-ac20-e5f361a7e31a [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-11-07T06:45:07.005Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-11-07T06:45:07.007Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-11-07T06:45:08.209Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-11-07T06:45:08.209Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-11-07T06:45:08.239Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-11-07T06:45:08.239Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/shoes-shop-b8ebd/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote public/404.html 
+[debug] [2022-11-07T06:45:27.941Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-11-07T06:45:28.113Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-11-07T06:45:28.114Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.13.0","browserURL":"https://www.gstatic.com/firebasejs/9.13.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.13.0/firebase.tgz"},"live":{"version":"9.13","browserURL":"https://www.gstatic.com/firebasejs/live/9.13/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.13/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.13.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.13.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.13.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.13.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.13.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.13.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.13.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.13.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.13.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at D:\Workspace\NextJS\shoes-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=258689802&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-11-07T06:45:45.380Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-11-07T06:45:45.380Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-11-07T06:45:45.795Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-11-07T06:45:45.795Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-11-07T06:45:45.812Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-11-07T06:45:46.292Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-11-07T06:45:46.292Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"nguyenleavu","id":108267198,"node_id":"U_kgDOBnQGvg","avatar_url":"https://avatars.githubusercontent.com/u/108267198?v=4","gravatar_id":"","url":"https://api.github.com/users/nguyenleavu","html_url":"https://github.com/nguyenleavu","followers_url":"https://api.github.com/users/nguyenleavu/followers","following_url":"https://api.github.com/users/nguyenleavu/following{/other_user}","gists_url":"https://api.github.com/users/nguyenleavu/gists{/gist_id}","starred_url":"https://api.github.com/users/nguyenleavu/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nguyenleavu/subscriptions","organizations_url":"https://api.github.com/users/nguyenleavu/orgs","repos_url":"https://api.github.com/users/nguyenleavu/repos","events_url":"https://api.github.com/users/nguyenleavu/events{/privacy}","received_events_url":"https://api.github.com/users/nguyenleavu/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":7,"public_gists":0,"followers":2,"following":0,"created_at":"2022-06-27T09:21:36Z","updated_at":"2022-09-25T05:57:20Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":13237,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as nguyenleavu 
+[info] 
+[debug] [2022-11-07T06:45:52.236Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:45:52.585Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:45:52.585Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:01.404Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:01.782Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:01.782Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:33.459Z] >>> [apiv2][query] GET https://api.github.com/repos/y/actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:33.852Z] <<< [apiv2][status] GET https://api.github.com/repos/y/actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:33.852Z] <<< [apiv2][body] GET https://api.github.com/repos/y/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:40.724Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:41.055Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:41.056Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:41.556Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:41.902Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:41.902Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:42.020Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:42.367Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:42.367Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:42.540Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:42.899Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:42.899Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:42.907Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:43.246Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:43.246Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:43.287Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:43.654Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:43.654Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:43.766Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:44.109Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:44.109Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:46:44.699Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:46:45.050Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:46:45.050Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:06.508Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:06.858Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:06.858Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:07.403Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:07.773Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:07.773Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:08.132Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:08.500Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:08.500Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:08.819Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:09.172Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:09.172Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:09.348Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:09.681Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:09.681Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:09.747Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.035Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.073Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:10.073Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:10.243Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.373Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:10.373Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:10.411Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.571Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.606Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:10.606Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:10.731Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.735Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:10.735Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:10.875Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:10.909Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:10.909Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:11.013Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:11.083Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:11.083Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:11.148Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:11.234Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:11.234Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:11.300Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:11.341Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:11.341Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:11.495Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:11.495Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:11.631Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:11.631Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:20.276Z] >>> [apiv2][query] GET https://api.github.com/repos/user/repsitory/actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:20.656Z] <<< [apiv2][status] GET https://api.github.com/repos/user/repsitory/actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:20.656Z] <<< [apiv2][body] GET https://api.github.com/repos/user/repsitory/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-07T06:47:25.955Z] >>> [apiv2][query] GET https://api.github.com/repos/user/repsitory/shoes-shop/actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:26.302Z] <<< [apiv2][status] GET https://api.github.com/repos/user/repsitory/shoes-shop/actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:26.302Z] <<< [apiv2][body] GET https://api.github.com/repos/user/repsitory/shoes-shop/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:31.580Z] >>> [apiv2][query] GET https://api.github.com/repos/yes/actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:31.935Z] <<< [apiv2][status] GET https://api.github.com/repos/yes/actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:31.935Z] <<< [apiv2][body] GET https://api.github.com/repos/yes/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-07T06:47:39.331Z] >>> [apiv2][query] GET https://api.github.com/repos/user/repository/actions/secrets/public-key type=owner
+[debug] [2022-11-07T06:47:39.682Z] <<< [apiv2][status] GET https://api.github.com/repos/user/repository/actions/secrets/public-key 404
+[debug] [2022-11-07T06:47:39.682Z] <<< [apiv2][body] GET https://api.github.com/repos/user/repository/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
